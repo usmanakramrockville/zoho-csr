@@ -22,7 +22,7 @@ let TimetrackingSchema = new Schema({
 
     billingType: {
         type: String,
-        trim: true
+        enum: ['FIXED_COST_FOR_TICKETS' , 'FIXED_COST_FOR_AGENTS' , 'SPECIFIC_COST_PER_AGENT' , 'SPECIFIC_COST_PER_PROFILE']
     },
 
     fixedCost: {
@@ -41,7 +41,7 @@ let TimetrackingSchema = new Schema({
 
     timerAction: {
         type: String,
-        trim: true
+        enum: ['ADD', 'DISCARD']
     },
 
     activityPreference: [{

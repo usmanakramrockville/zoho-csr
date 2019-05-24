@@ -13,7 +13,7 @@ let HolidayListSchema = new Schema({
 
     status: {
         type: String,
-        trim: true
+        enum: ['ACTIVE', 'INACTIVE']
     },
 
     holidays: [

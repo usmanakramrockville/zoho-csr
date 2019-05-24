@@ -12,7 +12,7 @@ let ValidationRuleSchema = new Schema({
     },
     status: {
         type: String,
-        trim: true
+        enum: ['ACTIVE', 'DISABLED'],
     },
 
     fieldConditions: [

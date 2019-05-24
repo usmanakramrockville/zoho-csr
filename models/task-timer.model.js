@@ -18,7 +18,8 @@ let TaskTimerSchema = new Schema({
     },
 
     state: {
-        type: Number
+        type: Number,
+        enum: ['RUNNING', 'PAUSED', 'INIT']
     },
 
 }, {

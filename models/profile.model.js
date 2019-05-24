@@ -20,7 +20,8 @@ let ProfileSchema = new Schema({
     },
 
     type: {
-        type: String
+        type: String,
+        enum:['Administrator','Standard','Light', 'Portal', 'Custom']
     },
 
     default: {
