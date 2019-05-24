@@ -85,13 +85,17 @@ let ContactSchema = new Schema({
     },
 
     ownerId: {
-        type: String,
-        trim: true
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId, 
     },
 
     accountId: {
-        type: String,
-        trim: true
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId,
     },
 
 
@@ -113,17 +117,8 @@ let ContactSchema = new Schema({
         trim: true
     },
 
-    createdTime: {
-        type: Date.now(),
-
-    },
-
-    modifiedTime: {
-        type: Date.now(),
-    },
-
     owner: {
-        id: String,
+        id: Schema.Types.ObjectId,
         firstName: String,
         lastName: String
     },
@@ -135,7 +130,7 @@ let ContactSchema = new Schema({
     },
 
     zohoCRMContact: {
-        id: String,
+        id: Schema.Types.ObjectId,
         type: String
     },
 

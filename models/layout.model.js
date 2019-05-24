@@ -7,18 +7,24 @@ let LayoutSchema = new Schema({
 
 
     createdBy: {
-        type: String,
-        trim: true
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+       type: Schema.Types.ObjectId
     },
 
     modifiedBy: {
-        type: String,
-        trim: true
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+       type: Schema.Types.ObjectId
     },
 
     departmentId: {
-        type: String,
-        trim: true
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+       type: Schema.Types.ObjectId
     },
 
     isDefaultLayout: {
@@ -31,11 +37,11 @@ let LayoutSchema = new Schema({
     },
 
     sections: {
-        id: String,
+        id: Schema.Types.ObjectId,
         isCustomSection: Boolean,
         name: String,
         fields: [{
-            id: String,
+            id: Schema.Types.ObjectId,
             name: String,
             displayLabel: String,
             type: String,

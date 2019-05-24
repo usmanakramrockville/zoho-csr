@@ -4,7 +4,7 @@ let mongoose = require("mongoose");
 let Schema = mongoose.Schema;
 
 let TicketTimerSchema = new Schema({
-    
+
     hours: {
         type: Number
     },
@@ -27,5 +27,4 @@ let TicketTimerSchema = new Schema({
 
 // Add index
 TicketTimerSchema.index({}, { unique: true });
-
 module.exports = mongoose.model("TicketTimer", TicketTimerSchema);

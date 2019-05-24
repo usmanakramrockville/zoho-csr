@@ -15,7 +15,7 @@ let DomainMappingSchema = new Schema({
         type: Boolean
     },
 
-    isApplied:{
+    isApplied: {
         type: Boolean
     },
 
@@ -28,11 +28,11 @@ let DomainMappingSchema = new Schema({
         type: Date.now()
     },
 
-    appliedTime : {
+    appliedTime: {
         type: Date.now()
     },
 
-    verifiedBy : {
+    verifiedBy: {
         type: String,
         trim: true
     },
@@ -40,8 +40,6 @@ let DomainMappingSchema = new Schema({
         type: String,
         trim: true
     },
-    
-
 
 }, {
         timestamps: true

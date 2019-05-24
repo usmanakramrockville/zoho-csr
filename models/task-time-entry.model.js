@@ -7,8 +7,10 @@ let TaskTimeEntrySchema = new Schema({
 
 
     ticketId: {
-        type: String,
-        trim: true
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId
     },
 
     requestChargeType: {
@@ -17,18 +19,20 @@ let TaskTimeEntrySchema = new Schema({
     },
 
     ownerId: {
-        type: String,
-        trim: true
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId
     },
 
     parent: {
-        id: String,
+        id: Schema.Types.ObjectId,
         type: String,
-        associatedTicketId : String
+        associatedTicketId: String
     },
 
     executedTime: {
-        type: Date.now()
+        type: Date.now
     },
 
     hoursSpent: {
@@ -62,28 +66,25 @@ let TaskTimeEntrySchema = new Schema({
 
     customFields: Array,
 
-    createdTime: {
-        type: Date.now()
-    },
-
-    modifiedTime: {
-        type: Date.now()
-    },
-
-
     createdBy: {
-        type: String,
-        trim: true
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId
     },
 
     modifiedBy: {
-        type: String,
-        trim: true
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId
     },
 
     invoiceId: {
-        type: String,
-        trim: true
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId
     },
 
 

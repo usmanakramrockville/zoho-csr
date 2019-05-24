@@ -7,8 +7,10 @@ let AgentSignatureSchema = new Schema({
 
 
     agentId: {
-        type: String,
-        trim: true
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId,
     },
 
     defaultSignature: {
@@ -20,11 +22,16 @@ let AgentSignatureSchema = new Schema({
         type: Boolean
     },
 
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+       type: Schema.Types.ObjectId,
+
+
     customizedSignatures: [{
-        departmentId: String,
+        departmentId: Schema.Types.ObjectId,
         signature: String
     }]
-
 
 }, {
         timestamps: true

@@ -5,22 +5,28 @@ let Schema = mongoose.Schema;
 
 let DependencyMappingSchema = new Schema({
 
-   
+
     layoutId: {
-        type: String,
-        trim: true
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId,
     },
     parentId: {
-        type: String,
-        trim: true
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId,
     },
 
     childId: {
-        type: String,
-        trim: true
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId,
     },
 
-    mappings:Array
+    mappings: Array
 
 }, {
         timestamps: true

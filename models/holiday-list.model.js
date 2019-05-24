@@ -24,11 +24,9 @@ let HolidayListSchema = new Schema({
         }
     ],
 
-    associatedBusinessHourIds: [{
-        type: String,
-        trim: true
-    }]
+    associatedBusinessHourIds: [Schema.Types.ObjectId]
 
+    
 
 }, {
         timestamps: true

@@ -22,13 +22,17 @@ let BusinessHourSchema = new Schema({
     },
 
     holidayListId: {
-        type: String,
-        trim: true
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId,
     },
 
     timeZoneId: {
-        type: String,
-        trim: true
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+       type: Schema.Types.ObjectId,
     },
 
     businessTimes: [{

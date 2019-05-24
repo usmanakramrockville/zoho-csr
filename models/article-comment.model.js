@@ -15,8 +15,10 @@ let ArticleCommentSchema = new Schema({
     },
 
     commenterId: {
-        type: String,
-        trim: true
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId,
     },
 
     commenter: {
@@ -26,13 +28,11 @@ let ArticleCommentSchema = new Schema({
         photoURL: String
     },
 
-
     contentType: {
         type: String,
         trim: true
     }
-
-
+    
 }, {
         timestamps: true
     });

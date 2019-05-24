@@ -3,9 +3,12 @@
 let mongoose = require("mongoose");
 let Schema = mongoose.Schema;
 
+
+
 let TicketTagSchema = new Schema({
     
-    
+    // No attributes available in API docs for this endpoint
+
 }, {
         timestamps: true
     });

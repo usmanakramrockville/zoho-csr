@@ -6,8 +6,10 @@ let Schema = mongoose.Schema;
 let NotificationSchema = new Schema({
 
     departmentId: {
-        type: String,
-        trim: true
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId,
     },
 
     departmentName: {
@@ -24,20 +26,24 @@ let NotificationSchema = new Schema({
         type: String,
         trim: true
     },
-    
+
     ticketId: {
-        type: String,
-        trim: true
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId,
     },
-    
+
     subject: {
         type: String,
         trim: true
     },
-    
+
     threadId: {
-        type: String,
-        trim: true
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId,
     },
 
     errorMessage: {
@@ -51,7 +57,7 @@ let NotificationSchema = new Schema({
     },
 
     assignee: {
-        id: String,
+        id: Schema.Types.ObjectId,
         firstName: String,
         lastName: String,
         email: String,

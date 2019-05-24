@@ -30,7 +30,10 @@ let AccountSchema = new Schema({
     },
 
     ownerId: {
-        type: String
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId,
     },
 
     firstName: {
@@ -88,17 +91,6 @@ let AccountSchema = new Schema({
         type: Number
     },
 
-
-    createdTime: {
-        type: Date.now(),
-
-    },
-
-    modifiedTime: {
-        type: Date.now(),
-    },
-
-
     isTrashed: {
         type: Boolean
     },
@@ -107,16 +99,6 @@ let AccountSchema = new Schema({
         type: String,
         trim: true
     }
-
-
-
-
-
-
-
-
-
-
 
 }, {
         timestamps: true

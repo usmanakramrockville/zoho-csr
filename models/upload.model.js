@@ -5,21 +5,23 @@ let Schema = mongoose.Schema;
 
 let UploadSchema = new Schema({
 
-    creatorId:{
+    creatorId: {
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId
+    },
+
+    name: {
         type: String,
         trim: true
     },
 
-    name:{
-        type: String,
-        trim: true
-    },
-
-    isPublic:{
+    isPublic: {
         type: Boolean
     },
 
-    size:{
+    size: {
         type: Number
     }
 

@@ -8,16 +8,19 @@ let ArticleFeedbackSchema = new Schema({
     ticket: {
         ticketNumber: Number,
         webUrl: String,
-        id: String,
+        id: Schema.Types.ObjectId,
         deletedTime: Date.now(),
         deletedBy: {
             photoURL: String,
             name: String,
-            id: String
+            id: Schema.Types.ObjectId
         }
     },
     contactId: {
-        type: String
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+       type: Schema.Types.ObjectId,
     },
     contact: {
         photoURL: String,
@@ -27,8 +30,10 @@ let ArticleFeedbackSchema = new Schema({
 
 
     ticketId: {
-        type: String,
-        trim: true
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId,
     },
     content: {
         type: String,
@@ -36,19 +41,9 @@ let ArticleFeedbackSchema = new Schema({
     },
     article: {
         webUrl: String,
-        id: String,
+        id: Schema.Types.ObjectId,
         title: String
-    },
-
-    createdTime: {
-        type: Date.now(),
-
-    },
-
-    modifiedTime: {
-        type: Date.now(),
-
-    },
+    }
 
 
 }, {

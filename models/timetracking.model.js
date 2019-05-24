@@ -10,13 +10,16 @@ let TimetrackingSchema = new Schema({
     },
 
     depId: {
-        type: String,
-        trim: true
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId,
     },
 
     isBillable: {
         type: Boolean
     },
+
     billingType: {
         type: String,
         trim: true
@@ -27,14 +30,15 @@ let TimetrackingSchema = new Schema({
     },
 
     agents: [{
-        id: String,
+        id: Schema.Types.ObjectId,
         cost: Number
     }],
 
     profiles: [{
-        id: String,
+        id: Schema.Types.ObjectId,
         cost: Number
     }],
+
     timerAction: {
         type: String,
         trim: true
@@ -64,9 +68,7 @@ let TimetrackingSchema = new Schema({
                 approvalActions: Boolean,
             }
         ]
-
     }]
-
 
 }, {
         timestamps: true

@@ -5,7 +5,7 @@ let Schema = mongoose.Schema;
 
 let ValidationRuleSchema = new Schema({
 
-   
+
     fieldName: {
         type: String,
         trim: true
@@ -15,24 +15,22 @@ let ValidationRuleSchema = new Schema({
         trim: true
     },
 
-
     fieldConditions: [
         {
             name: String,
             pattern: String,
-            conditions:[{
+            conditions: [{
                 fieldName: String,
                 value: [],
-                displayValue:[],
+                displayValue: [],
                 condition: String
             }],
-
             actions: [{
                 type: String
             }]
         }
     ]
-   
+
 
 }, {
         timestamps: true

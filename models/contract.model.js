@@ -7,23 +7,32 @@ let ContractSchema = new Schema({
 
 
     associatedSLAId: {
-        type: String
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId,
     },
 
     accountId: {
-        type: String,
-        trim: true
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId,
     },
 
     departmentId: {
-        type: String,
-        trim: true
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId,
 
     },
 
     productId: {
-        type: String,
-        trim: true
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId,
     },
 
 
@@ -52,29 +61,24 @@ let ContractSchema = new Schema({
     },
 
     ownerId: {
-        type: String,
-        trim: true
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId,
     },
 
     createdBy: {
-        type: String,
-        trim: true
-
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId
     },
 
     modifiedBy: {
-        type: String,
-        trim: true
-
-    },
-
-    createdTime: {
-        type: Date.now(),
-
-    },
-
-    modifiedTime: {
-        type: Date.now(),
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId
     },
 
     contractName: {
@@ -90,7 +94,6 @@ let ContractSchema = new Schema({
     },
 
     customFields: Array
-
 
 }, {
         timestamps: true

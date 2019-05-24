@@ -5,12 +5,13 @@ let Schema = mongoose.Schema;
 
 let TaskSchema = new Schema({
 
-    customFields: {
-
-    },
+    customFields: Array,
 
     departmentId: {
-        type: String
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId
     },
 
     subject: {
@@ -19,16 +20,22 @@ let TaskSchema = new Schema({
     },
 
     ticketId: {
-        type: String
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId
     },
 
     dueDate: {
-        type: Date.now(),
+        type: Date,
 
     },
 
     ownerId: {
-        type: String
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId
     },
 
     category: {
@@ -47,23 +54,18 @@ let TaskSchema = new Schema({
         type: String
     },
 
-
-    createdTime: {
-        type: Date.now(),
-
-    },
-
-    modifiedTime: {
-        type: Date.now(),
-    },
-
-
     creatorId: {
-        type: String
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId
     },
 
     ticketId: {
-        type: String
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId
     },
 
     webUrl: {
@@ -72,7 +74,7 @@ let TaskSchema = new Schema({
     },
 
     assignee: {
-        id: String,
+        id: Schema.Types.ObjectId,
         firstName: String,
         lastName: String,
         email: String,

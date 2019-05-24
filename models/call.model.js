@@ -6,24 +6,26 @@ let Schema = mongoose.Schema;
 let CallSchema = new Schema({
 
 
-    customFields:Array,
+    customFields: Array,
 
-    departmentId:{
+    departmentId: {
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId,
+    },
+
+    subject: {
         type: String,
         trim: true
     },
 
-    subject:{
+    startTime: {
+        type: Date.now()
+    },
+
+    direction: {
         type: String,
-        trim: true
-    },
-
-    startTime:{
-        type:Date.now()
-    },
-
-    direction:{
-        type:String,
         trim: true
     },
 
@@ -36,8 +38,10 @@ let CallSchema = new Schema({
     },
 
     ownerId: {
-        type: String,
-        trim: true
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId,
     },
 
     priority: {
@@ -50,26 +54,32 @@ let CallSchema = new Schema({
         trim: true
     },
 
-    creatorId : {
-        type: String,
-        trim: true
+    creatorId: {
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId,
     },
 
-    ticketId :{
-        type: String,
-        trim: true
+    ticketId: {
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+         */
+        type: Schema.Types.ObjectId,
     },
 
     contactId: {
-        type: String,
-        trim: true
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId,
     },
 
     ticket: {
-        id: String,
+        id: Schema.Types.ObjectId,
         ticketNumber: Number,
         contact: {
-            id: String,
+            id: Schema.Types.ObjectId,
             lastName: String,
             firstName: String
         }

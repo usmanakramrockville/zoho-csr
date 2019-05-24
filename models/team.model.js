@@ -16,8 +16,10 @@ let TeamSchema = new Schema({
     },
 
     departmentId: {
-		type: Schema.Types.ObjectId,
-		ref: "Department"
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId,
     },
 
     subTeams: {
@@ -28,15 +30,15 @@ let TeamSchema = new Schema({
         type: Array,
     },
 
-    rolesWithSubordinates:{
+    rolesWithSubordinates: {
         type: Array
     },
 
-    agents:{
+    agents: {
         type: Array
     },
 
-    derivedAgents:{
+    derivedAgents: {
         type: Array
     }
 

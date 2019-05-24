@@ -6,8 +6,10 @@ let Schema = mongoose.Schema;
 let TicketTimeEntrySchema = new Schema({
 
     ticketId: {
-        type: String,
-        trim: true
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId
     },
 
     requestChargeType: {
@@ -16,8 +18,10 @@ let TicketTimeEntrySchema = new Schema({
     },
 
     ownerId: {
-        type: String,
-        trim: true
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId
     },
 
     parent: {
@@ -27,7 +31,7 @@ let TicketTimeEntrySchema = new Schema({
     },
 
     executedTime: {
-        type: Date.now()
+        type: Date.now
     },
 
     hoursSpent: {
@@ -62,27 +66,25 @@ let TicketTimeEntrySchema = new Schema({
 
     customFields: Array,
 
-    createdTime: {
-        type: Date.now()
-    },
-    modifiedTime: {
-        type: Date.now()
-    },
-
-
     createdBy: {
-        type: String,
-        trim: true
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId
     },
 
     modifiedBy: {
-        type: String,
-        trim: true
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId
     },
 
     invoiceId: {
-        type: String,
-        trim: true
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId
     }
 
 

@@ -31,17 +31,10 @@ let TicketFollowerSchema = new Schema({
     }
 
 
-
-
 }, {
         timestamps: true
     });
 
 // Add index
 TicketFollowerSchema.index({}, { unique: true });
-
-
-
-
-
 module.exports = mongoose.model("TicketFollower", TicketFollowerSchema);

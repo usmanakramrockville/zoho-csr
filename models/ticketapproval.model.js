@@ -5,7 +5,7 @@ let Schema = mongoose.Schema;
 
 let TicketApprovalSchema = new Schema({
 
-    approverIds: Array,
+    approverIds: [Schema.Types.ObjectId],
 
     subject: {
         type: String,
@@ -23,14 +23,14 @@ let TicketApprovalSchema = new Schema({
     },
 
     requestedTime: {
-        type: Date.now()
+        type: Date.now
     },
     processedTime: {
-        type: Date.now()
+        type: Date.now
     },
 
     requester: {
-        id: String,
+        id: Schema.Types.ObjectId,
         firstName: String,
         lastName: String,
         email: String,
@@ -38,7 +38,7 @@ let TicketApprovalSchema = new Schema({
     },
 
     approver: {
-        id: String,
+        id: Schema.Types.ObjectId,
         firstName: String,
         lastName: String,
         email: String,

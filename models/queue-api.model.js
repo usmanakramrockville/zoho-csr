@@ -3,7 +3,7 @@
 let mongoose = require("mongoose");
 let Schema = mongoose.Schema;
 
-let QueueapiSchema = new Schema({
+let QueueApiSchema = new Schema({
 
     subject: {
         type: String,
@@ -11,16 +11,25 @@ let QueueapiSchema = new Schema({
     },
 
     departmentId: {
-        type: String,
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+       type: Schema.Types.ObjectId,
     },
 
     contactId : {
-        type: String,
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId
     },
 
 
     productId: {
-        type: String,
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId
     },
 
     uploads:{
@@ -52,7 +61,10 @@ let QueueapiSchema = new Schema({
     },
 
     assigneeId:{
-        type: String
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+       type: Schema.Types.ObjectId
     },
 
     category:{
@@ -68,7 +80,7 @@ let QueueapiSchema = new Schema({
     },
 
     dueDate: {
-        type: Date.now()
+        type: Date
     },
 
     priority: {
@@ -90,15 +102,6 @@ let QueueapiSchema = new Schema({
     webUrl: {
         type: String
     },
-
-    createdTime: {
-        type: Date.now()
-    },
-
-    modifiedTime: {
-        type: Date.now()
-    },
-
 
     commentCount: {
         type: Number
@@ -133,7 +136,7 @@ let QueueapiSchema = new Schema({
     },
 
     closedTime:{
-        type: Date.now()
+        type: Date
     },
 
     ticketNumber:{
@@ -141,7 +144,7 @@ let QueueapiSchema = new Schema({
     },
 
     customerResponseTime:{
-        type: Date.now()
+        type: Date.now
     },
 
     isRead:{
@@ -149,7 +152,10 @@ let QueueapiSchema = new Schema({
     },
 
     teamId:{
-        type: String
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+       type: Schema.Types.ObjectId
     },
 
     isFollowing: {
@@ -170,6 +176,6 @@ let QueueapiSchema = new Schema({
     });
 
 // Add index
-QueueapiSchema.index({}, { unique: true });
+QueueApiSchema.index({}, { unique: true });
 
-module.exports = mongoose.model("Queueapi", QueueapiSchema);
+module.exports = mongoose.model("QueueApi", QueueApiSchema);

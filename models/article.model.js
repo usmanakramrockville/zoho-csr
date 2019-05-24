@@ -5,13 +5,8 @@ let Schema = mongoose.Schema;
 
 let ArticleSchema = new Schema({
 
-
-    modifiedTime: {
-        type: Date.now(),
-
-    },
     attachments: [{
-        reseourceId: String,
+        reseourceId: Schema.Types.ObjectId,
         name: String,
         viewUrl: String,
         downloadUrl: String,
@@ -24,40 +19,45 @@ let ArticleSchema = new Schema({
     },
 
     departmentId: {
-        type: String,
-        trim: true
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId,
     },
 
     modifierId: {
-        type: String,
-        trim: true
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId,
     },
     creatorId: {
-        type: String,
-        trim: true
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId,
     },
 
     title: {
         type: String,
 
     },
+
     expiryDate: {
-        type: Date.now()
+        type: Date
     },
 
     public: {
         type: Boolean
     },
-    createdTime: {
-        type: Date.now()
-    },
+
     modifiedBy: {
         photoURL: {
             type: String,
             trim: true
         },
         name: String,
-        id: String
+        id: Schema.Types.ObjectId
     },
 
     seo: {
@@ -76,7 +76,7 @@ let ArticleSchema = new Schema({
     author: {
         photoURL: String,
         name: String,
-        id: String
+        id: Schema.Types.ObjectId
     },
     permission: {
         type: String
@@ -85,8 +85,10 @@ let ArticleSchema = new Schema({
         type: String
     },
     authorId: {
-        type: String,
-        trim: true
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId,
     },
 
     tags: Array,
@@ -104,7 +106,7 @@ let ArticleSchema = new Schema({
     createdBy: {
         photoURL: String,
         name: String,
-        id: String
+        id: Schema.Types.ObjectId
     },
     portalUrl: {
         type: String,
@@ -115,6 +117,7 @@ let ArticleSchema = new Schema({
         type: String,
         trim: true
     },
+
     attachmentCount: {
         type: Number,
     },
@@ -126,10 +129,10 @@ let ArticleSchema = new Schema({
     metrics: {
         feedbackCount: Number,
         unlikeCount: Number,
-        lastUsageTime: Date.now(),
+        lastUsageTime: Date,
         likeCount: Number,
         viewCount: Number,
-        lastActivityTime: Date.now(),
+        lastActivityTime: Date,
         usageCount: Number
     },
 
@@ -139,25 +142,19 @@ let ArticleSchema = new Schema({
     },
     category: {
         name: String,
-        id: String
+        id: Schema.Types.ObjectId
     },
 
     categoryId: {
-        type: String,
-        trim: true
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId,
     },
+
     status: {
         type: String,
         trim: true
-    },
-
-    createdTime: {
-        type: Date.now(),
-
-    },
-
-    modifiedTime: {
-        type: Date.now(),
     }
 
 }, {

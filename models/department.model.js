@@ -3,7 +3,7 @@
 let mongoose = require("mongoose");
 let Schema = mongoose.Schema;
 
-let TeamSchema = new Schema({
+let DepartmentSchema = new Schema({
 
     name: {
         type: String,
@@ -20,15 +20,15 @@ let TeamSchema = new Schema({
         trim: true
     },
 
-    isVisibleInCustomerPortal:{
+    isVisibleInCustomerPortal: {
         type: Boolean
     },
 
-    isEnabled:{
+    isEnabled: {
         type: Boolean
     },
 
-    isAssignToTeamEnabled:{
+    isAssignToDepartmentEnabled: {
         type: Boolean
     },
 
@@ -37,19 +37,20 @@ let TeamSchema = new Schema({
     },
 
     creatorId: {
-        type: String
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId,
     },
 
-    associatedAgentIds: {
-        type: Array
-    },
+    associatedAgentIds: [Schema.Types.ObjectId],
 
     isDefault: {
         type: Boolean
     },
 
     chatStatus: {
-       type: String
+        type: String
     }
 
 }, {
@@ -57,6 +58,6 @@ let TeamSchema = new Schema({
     });
 
 // Add index
-TeamSchema.index({}, { unique: true });
+DepartmentSchema.index({}, { unique: true });
 
-module.exports = mongoose.model("Team", TeamSchema);
+module.exports = mongoose.model("Department", DepartmentSchema);

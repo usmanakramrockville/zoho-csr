@@ -10,14 +10,23 @@ let TicketSchema = new Schema({
         trim: true,
     },
     departmentId: {
-        type: String,
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId,
     },
     contactId: {
-        type: String,
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId,
     },
 
     productId: {
-        type: String,
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId,
     },
 
     uploads: {
@@ -50,7 +59,10 @@ let TicketSchema = new Schema({
     },
 
     assigneeId: {
-        type: String
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+           type: String
+       */
+        type: Schema.Types.ObjectId,
     },
 
     category: {
@@ -69,7 +81,7 @@ let TicketSchema = new Schema({
     },
 
     dueDate: {
-        type: Date.now()
+        type: Date
     },
 
     priority: {
@@ -97,14 +109,6 @@ let TicketSchema = new Schema({
 
     webUrl: {
         type: String
-    },
-
-    createdTime: {
-        type: Date.now()
-    },
-
-    modifiedTime: {
-        type: Date.now()
     },
 
     timeEntryCount: {
@@ -140,7 +144,7 @@ let TicketSchema = new Schema({
     },
 
     closedTime: {
-        type: Date.now()
+        type: Date.now
     },
 
     ticketNumber: {
@@ -148,7 +152,7 @@ let TicketSchema = new Schema({
     },
 
     customerResponseTime: {
-        type: Date.now()
+        type: Date.now
     },
 
     isRead: {
@@ -160,12 +164,15 @@ let TicketSchema = new Schema({
         firstName: String,
         lastName: String,
         photoURL: String,
-        id: Number,
+        id: Schema.Types.ObjectId,
         email: String
     },
 
     teamId: {
-        type: String
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId,
     },
 
     isFollowing: {
@@ -174,12 +181,12 @@ let TicketSchema = new Schema({
 
     department: {
         name: String,
-        id: String
+        id: Schema.Types.ObjectId
     },
 
     team: {
         name: String,
-        id: String
+        id: Schema.Types.ObjectId
     },
 
     channelRelatedInfo: {
@@ -188,8 +195,6 @@ let TicketSchema = new Schema({
         sourceLink: String,
         topicType: String
     }
-
-
 
 }, {
         timestamps: true

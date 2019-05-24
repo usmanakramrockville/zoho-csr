@@ -6,13 +6,16 @@ let Schema = mongoose.Schema;
 let AccountAttachmentSchema = new Schema({
 
     creatorId: {
-        type: String,
-        trim: true
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String,
+        */
+        type: Schema.Types.ObjectId,
     },
 
     name: {
         type: String,
-        trim: true
+        trim: true,
+        required:true
     },
 
     isPublic: {

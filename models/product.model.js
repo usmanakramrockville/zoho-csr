@@ -5,12 +5,13 @@ let Schema = mongoose.Schema;
 
 let ProductSchema = new Schema({
 
-    departmentIds: [
-        { type: String }
-    ],
+    departmentIds: [ Schema.Types.ObjectId ],
 
     ownerId: {
-        type: String
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+       type: Schema.Types.ObjectId,
     },
 
     productName: {
@@ -42,22 +43,18 @@ let ProductSchema = new Schema({
     customFields: Array,
 
     createdBy: {
-        type: String
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+       type: Schema.Types.ObjectId,
     },
 
     modifiedBy: {
-        type: String
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+       type: Schema.Types.ObjectId,
     },
-
-    createdTime: {
-        type: Date.now(),
-
-    },
-
-    modifiedTime: {
-        type: Date.now(),
-    },
-
 
     description: {
         type: String

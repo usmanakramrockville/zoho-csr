@@ -5,7 +5,6 @@ let Schema = mongoose.Schema;
 
 let LayoutRuleSchema = new Schema({
 
-
     name: {
         type: String,
         trim: true
@@ -27,7 +26,7 @@ let LayoutRuleSchema = new Schema({
     },
 
     fieldConditions: [{
-        id: String,
+        id: Schema.Types.ObjectId,
         name: Boolean,
         pattern: String,
         conditions: {

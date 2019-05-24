@@ -5,38 +5,38 @@ let Schema = mongoose.Schema;
 
 let ThreadSchema = new Schema({
 
-    hasAttach : {
+    hasAttach: {
         type: Boolean
     },
-    summary : {
+    summary: {
         type: String
     },
-    attachments : [ {
-      size : Number,
-      name : String,
-      id : Number ,
-      href : String
-    } ],
+    attachments: [{
+        size: Number,
+        name: String,
+        id: Schema.Types.ObjectId,
+        href: String
+    }],
 
-    visibility : String,
+    visibility: String,
 
-    author : {
-      photoURL : String,
-      name : String,
-      type : String,
-      email : String
+    author: {
+        photoURL: String,
+        name: String,
+        type: String,
+        email: String
     },
 
-    channel : String,
-    
-    createdTime : Date.now(),
-    actions : Array,
-    content : String,
+    channel: String,
+
+    createdTime: Date.now(),
+    actions: Array,
+    content: String,
     contentType: {
         type: String
     },
-    status : String,
-    direction : String,
+    status: String,
+    direction: String,
 
     isForward: {
         type: Boolean
@@ -46,11 +46,14 @@ let ThreadSchema = new Schema({
         type: Boolean
     },
 
-    inReplyToThreadId:{
-        type: String
+    inReplyToThreadId: {
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+        type: Schema.Types.ObjectId
     },
 
-    fromEmailAddress :{
+    fromEmailAddress: {
         type: String
     },
 
@@ -62,7 +65,7 @@ let ThreadSchema = new Schema({
         type: String
     },
 
-    bcc:{
+    bcc: {
         type: String
     },
 
@@ -70,7 +73,7 @@ let ThreadSchema = new Schema({
         type: String
     },
 
-    isDescriptionThread:{
+    isDescriptionThread: {
         type: Boolean
     }
 

@@ -15,8 +15,10 @@ let ContactCommentSchema = new Schema({
     },
 
     commenterId: {
-        type: String,
-        trim: true
+        /*  Note: MongoDB generated Id requires type: Schema.Types.ObjectId
+            type: String
+        */
+       type: Schema.Types.ObjectId,
     },
 
     commenter: {
@@ -25,7 +27,6 @@ let ContactCommentSchema = new Schema({
         type: String,
         photoURL: String
     },
-
 
     contentType: {
         type: String,
