@@ -13,12 +13,13 @@ let BusinessHourSchema = new Schema({
 
     status: {
         type: String,
-        trim: true
+        enum: ['ACTIVE', 'INACTIVE']
     },
 
     type: {
         type: String,
-        trim: true
+        enum: ['24x7', 'SPECIFIC', 'CUSTOM']
+
     },
 
     holidayListId: {
@@ -36,7 +37,10 @@ let BusinessHourSchema = new Schema({
     },
 
     businessTimes: [{
-        day: String,
+        day: {
+            type: String,
+            enum: ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY' ,'FRIDAY', 'SATURDAY']
+        },
         startTime: String,
         endTime: String
     }]

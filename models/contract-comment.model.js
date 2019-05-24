@@ -31,7 +31,8 @@ let ContractCommentSchema = new Schema({
 
     contentType: {
         type: String,
-        trim: true
+        enum: ['html', 'plainText'],
+        default: 'html'
     }
 
 

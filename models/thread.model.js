@@ -27,15 +27,27 @@ let ThreadSchema = new Schema({
         email: String
     },
 
-    channel: String,
-
-    createdTime: Date.now(),
-    actions: Array,
-    content: String,
-    contentType: {
-        type: String
+    channel: {
+        type: String,
+        enum: ['FACEBOOK', 'TWITTER', 'EMAIL ', 'FORUMS']
     },
-    status: String,
+
+    
+    actions: Array,
+    
+    content: String,
+    
+    contentType: {
+        type: String,
+        enum: ['html', 'plainText'],
+        default: 'plainText'
+    },
+
+    status:  {
+        type: String,
+        enum: ['SUCCESS', 'PENDING', 'FAILED ', 'DRAFT']
+    },
+
     direction: String,
 
     isForward: {

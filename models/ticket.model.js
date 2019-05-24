@@ -55,7 +55,7 @@ let TicketSchema = new Schema({
 
     statusType: {
         type: String,
-        trim: true
+        enum: ['OPEN', 'ON HOLD', 'CLOSED']
     },
 
     assigneeId: {
@@ -94,6 +94,7 @@ let TicketSchema = new Schema({
 
     classification: {
         type: String,
+        enum: ['Problem', 'Request', 'Question', 'Others']
     },
 
     customFields: {

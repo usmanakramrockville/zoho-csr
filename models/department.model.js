@@ -50,7 +50,8 @@ let DepartmentSchema = new Schema({
     },
 
     chatStatus: {
-        type: String
+        type: String,
+        enum : ['AVAILABLE','DISABLED','NOT_CREATED']
     }
 
 }, {

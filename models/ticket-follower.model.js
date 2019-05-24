@@ -27,7 +27,7 @@ let TicketFollowerSchema = new Schema({
 
     following:{
         type: String,
-        trim: true
+        enum: ['tickets', 'contacts', 'accounts']
     }
 
 

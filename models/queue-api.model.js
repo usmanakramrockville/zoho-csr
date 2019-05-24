@@ -58,6 +58,7 @@ let QueueApiSchema = new Schema({
 
     statusType:{
         type:String,
+        enum: ['OPEN', 'ON HOLD', 'CLOSED']
     },
 
     assigneeId:{
@@ -92,7 +93,8 @@ let QueueApiSchema = new Schema({
     },
 
     classification:{
-        type: String
+        type: String,
+        enum: ['Problem', 'Request', 'Question', 'Others']
     },
 
     customFields:{

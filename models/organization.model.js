@@ -22,6 +22,7 @@ let OrganizationSchema = new Schema({
     },
     edition: {
         type: String,
+        enum:['FREE','ENTERPRISE','PROFESSIONAL'],
         trim: true,
         uppercase: true
     },
