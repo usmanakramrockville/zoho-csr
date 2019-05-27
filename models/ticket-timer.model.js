@@ -27,5 +27,5 @@ let TicketTimerSchema = new Schema({
     });
 
 // Add index
-TicketTimerSchema.index({}, { unique: true });
+// TicketTimerSchema.index({}, { unique: true });
 module.exports = mongoose.model("TicketTimer", TicketTimerSchema);

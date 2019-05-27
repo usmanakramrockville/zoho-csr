@@ -41,6 +41,6 @@ let TicketCommentSchema = new Schema({
     });
 
 // Add index
-TicketCommentSchema.index({}, { unique: true });
+// TicketCommentSchema.index({}, { unique: true });
 
 module.exports = mongoose.model("TicketComment", TicketCommentSchema);

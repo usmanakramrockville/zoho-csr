@@ -87,6 +87,6 @@ let TaskSchema = new Schema({
     });
 
 // Add index
-TaskSchema.index({}, { unique: true });
+TaskSchema.index({subject: 1});
 
 module.exports = mongoose.model("Task", TaskSchema);

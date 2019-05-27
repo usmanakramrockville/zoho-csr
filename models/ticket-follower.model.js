@@ -36,5 +36,5 @@ let TicketFollowerSchema = new Schema({
     });
 
 // Add index
-TicketFollowerSchema.index({}, { unique: true });
+// TicketFollowerSchema.index({}, { unique: true });
 module.exports = mongoose.model("TicketFollower", TicketFollowerSchema);

@@ -51,6 +51,6 @@ let ArticleFeedbackSchema = new Schema({
     });
 
 // Add index
-ArticleFeedbackSchema.index({}, { unique: true });
+// ArticleFeedbackSchema.index({}, { unique: true });
 
 module.exports = mongoose.model("ArticleFeedback", ArticleFeedbackSchema);

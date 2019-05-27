@@ -65,6 +65,6 @@ let ProductSchema = new Schema({
     });
 
 // Add index
-ProductSchema.index({}, { unique: true });
+ProductSchema.index({productName: 1});
 
 module.exports = mongoose.model("Product", ProductSchema);

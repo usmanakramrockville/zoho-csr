@@ -95,6 +95,6 @@ let ThreadSchema = new Schema({
     });
 
 // Add index
-ThreadSchema.index({}, { unique: true });
+// ThreadSchema.index({}, { unique: true });
 
 module.exports = mongoose.model("Thread", ThreadSchema);

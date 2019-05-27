@@ -93,6 +93,6 @@ let TaskTimeEntrySchema = new Schema({
     });
 
 // Add index
-TaskTimeEntrySchema.index({}, { unique: true });
+// TaskTimeEntrySchema.index({}, { unique: true });
 
 module.exports = mongoose.model("TaskTimeEntry", TaskTimeEntrySchema);

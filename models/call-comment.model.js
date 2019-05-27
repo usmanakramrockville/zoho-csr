@@ -40,6 +40,6 @@ let CallCommentSchema = new Schema({
     });
 
 // Add index
-CallCommentSchema.index({}, { unique: true });
+// CallCommentSchema.index({}, { unique: true });
 
 module.exports = mongoose.model("CallComment", CallCommentSchema);

@@ -30,6 +30,6 @@ let ContactFollowerSchema = new Schema({
     });
 
 // Add index
-ContactFollowerSchema.index({}, { unique: true });
+// ContactFollowerSchema.index({}, { unique: true });
 
 module.exports = mongoose.model("ContactFollower", ContactFollowerSchema);

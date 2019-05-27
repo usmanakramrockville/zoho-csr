@@ -37,6 +37,6 @@ let ValidationRuleSchema = new Schema({
     });
 
 // Add index
-ValidationRuleSchema.index({}, { unique: true });
+// ValidationRuleSchema.index({}, { unique: true });
 
 module.exports = mongoose.model("ValidationRule", ValidationRuleSchema);

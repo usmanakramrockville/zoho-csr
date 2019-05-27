@@ -162,6 +162,6 @@ let ArticleSchema = new Schema({
     });
 
 // Add index
-ArticleSchema.index({}, { unique: true });
+ArticleSchema.index({title: 1}, { unique: true });
 
 module.exports = mongoose.model("Article", ArticleSchema);

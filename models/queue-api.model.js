@@ -178,6 +178,6 @@ let QueueApiSchema = new Schema({
     });
 
 // Add index
-QueueApiSchema.index({}, { unique: true });
+// QueueApiSchema.index({}, { unique: true });
 
 module.exports = mongoose.model("QueueApi", QueueApiSchema);

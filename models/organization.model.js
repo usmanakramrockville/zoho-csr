@@ -94,6 +94,6 @@ let OrganizationSchema = new Schema({
     });
 
 // Add index
-OrganizationSchema.index({}, { unique: true });
+// OrganizationSchema.index({}, { unique: true });
 
 module.exports = mongoose.model("Organization", OrganizationSchema);

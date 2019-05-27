@@ -39,6 +39,6 @@ let RoleSchema = new Schema({
     });
 
 // Add index
-RoleSchema.index({}, { unique: true });
+// RoleSchema.index({}, { unique: true });
 
 module.exports = mongoose.model("Role", RoleSchema);

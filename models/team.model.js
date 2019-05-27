@@ -47,6 +47,6 @@ let TeamSchema = new Schema({
     });
 
 // Add index
-TeamSchema.index({}, { unique: true });
+// TeamSchema.index({}, { unique: true });
 
 module.exports = mongoose.model("Team", TeamSchema);

@@ -31,6 +31,6 @@ let ProductAttachmentSchema = new Schema({
     });
 
 // Add index
-ProductAttachmentSchema.index({}, { unique: true });
+ProductAttachmentSchema.index({name: 1});
 
 module.exports = mongoose.model("ProductAttachment", ProductAttachmentSchema);

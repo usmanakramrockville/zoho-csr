@@ -105,6 +105,6 @@ let AccountSchema = new Schema({
     });
 
 // Add index
-AccountSchema.index({}, { unique: true });
+AccountSchema.index({accountName: 1});
 
 module.exports = mongoose.model("Account", AccountSchema);

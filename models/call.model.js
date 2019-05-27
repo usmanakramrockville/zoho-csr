@@ -90,7 +90,7 @@ let CallSchema = new Schema({
         timestamps: true
     });
 
-// Add index
-CallSchema.index({}, { unique: true });
+// Add index; 
+CallSchema.index({subject : 1 });
 
 module.exports = mongoose.model("Call", CallSchema);

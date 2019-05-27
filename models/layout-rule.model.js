@@ -47,6 +47,6 @@ let LayoutRuleSchema = new Schema({
     });
 
 // Add index
-LayoutRuleSchema.index({}, { unique: true });
+// LayoutRuleSchema.index({}, { unique: true });
 
 module.exports = mongoose.model("LayoutRule", LayoutRuleSchema);

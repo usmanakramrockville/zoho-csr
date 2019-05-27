@@ -33,6 +33,6 @@ let HolidayListSchema = new Schema({
     });
 
 // Add index
-HolidayListSchema.index({}, { unique: true });
+// HolidayListSchema.index({}, { unique: true });
 
 module.exports = mongoose.model("HolidayList", HolidayListSchema);

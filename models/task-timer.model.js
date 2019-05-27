@@ -27,6 +27,6 @@ let TaskTimerSchema = new Schema({
     });
 
 // Add index
-TaskTimerSchema.index({}, { unique: true });
+// TaskTimerSchema.index({}, { unique: true });
 
 module.exports = mongoose.model("TaskTimer", TaskTimerSchema);

@@ -50,6 +50,6 @@ let TicketApprovalSchema = new Schema({
     });
 
 // Add index
-TicketApprovalSchema.index({}, { unique: true });
+// TicketApprovalSchema.index({}, { unique: true });
 
 module.exports = mongoose.model("TicketApproval", TicketApprovalSchema);

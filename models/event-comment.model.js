@@ -41,6 +41,6 @@ let EventCommentSchema = new Schema({
     });
 
 // Add index
-EventCommentSchema.index({}, { unique: true });
+// EventCommentSchema.index({}, { unique: true });
 
 module.exports = mongoose.model("EventComment", EventCommentSchema);

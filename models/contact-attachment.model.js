@@ -31,6 +31,6 @@ let ContactAttachmentSchema = new Schema({
     });
 
 // Add index
-ContactAttachmentSchema.index({}, { unique: true });
+// ContactAttachmentSchema.index({}, { unique: true });
 
 module.exports = mongoose.model("ContactAttachment", ContactAttachmentSchema);

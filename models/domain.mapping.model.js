@@ -46,6 +46,6 @@ let DomainMappingSchema = new Schema({
     });
 
 // Add index
-DomainMappingSchema.index({}, { unique: true });
+// DomainMappingSchema.index({}, { unique: true });
 
 module.exports = mongoose.model("DomainMapping", DomainMappingSchema);

@@ -51,6 +51,6 @@ let BusinessHourSchema = new Schema({
     });
 
 // Add index
-BusinessHourSchema.index({}, { unique: true });
+// BusinessHourSchema.index({}, { unique: true });
 
 module.exports = mongoose.model("BusinessHour", BusinessHourSchema);

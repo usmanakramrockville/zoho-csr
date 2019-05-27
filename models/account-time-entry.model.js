@@ -93,6 +93,6 @@ let AccountTimeEntrySchema = new Schema({
     });
 
 // Add index
-AccountTimeEntrySchema.index({}, { unique: true });
+// AccountTimeEntrySchema.index({}, { unique: true });
 
 module.exports = mongoose.model("AccountTimeEntry", AccountTimeEntrySchema);

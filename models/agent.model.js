@@ -80,6 +80,6 @@ let AgentSchema = new Schema({
     });
 
 // Add index
-AgentSchema.index({}, { unique: true });
+AgentSchema.index({emailId: 1}, {unique: true});
 
 module.exports = mongoose.model("Agent", AgentSchema);

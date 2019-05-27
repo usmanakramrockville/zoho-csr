@@ -40,6 +40,6 @@ let ContactCommentSchema = new Schema({
     });
 
 // Add index
-ContactCommentSchema.index({}, { unique: true });
+// ContactCommentSchema.index({}, { unique: true });
 
 module.exports = mongoose.model("ContactComment", ContactCommentSchema);

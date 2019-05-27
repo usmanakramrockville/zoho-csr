@@ -41,6 +41,6 @@ let ContractCommentSchema = new Schema({
     });
 
 // Add index
-ContractCommentSchema.index({}, { unique: true });
+// ContractCommentSchema.index({}, { unique: true });
 
 module.exports = mongoose.model("ContractComment", ContractCommentSchema);

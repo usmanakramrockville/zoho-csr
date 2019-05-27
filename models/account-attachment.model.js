@@ -32,6 +32,6 @@ let AccountAttachmentSchema = new Schema({
     });
 
 // Add index
-AccountAttachmentSchema.index({}, { unique: true });
+// AccountAttachmentSchema.index({}, { unique: true });
 
 module.exports = mongoose.model("AccountAttachment", AccountAttachmentSchema);

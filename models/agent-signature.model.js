@@ -38,6 +38,6 @@ let AgentSignatureSchema = new Schema({
     });
 
 // Add index
-AgentSignatureSchema.index({}, { unique: true });
+// AgentSignatureSchema.index({}, { unique: true });
 
 module.exports = mongoose.model("AgentSignature", AgentSignatureSchema);

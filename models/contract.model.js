@@ -100,6 +100,6 @@ let ContractSchema = new Schema({
     });
 
 // Add index
-ContractSchema.index({}, { unique: true });
+ContractSchema.index({contractName: 1});
 
 module.exports = mongoose.model("Contract", ContractSchema);

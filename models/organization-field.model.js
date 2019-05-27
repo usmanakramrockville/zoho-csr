@@ -41,6 +41,6 @@ let OrganizationFieldSchema = new Schema({
     });
 
 // Add index
-OrganizationFieldSchema.index({}, { unique: true });
+// OrganizationFieldSchema.index({}, { unique: true });
 
 module.exports = mongoose.model("OrganizationField", OrganizationFieldSchema);

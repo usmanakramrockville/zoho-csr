@@ -140,6 +140,6 @@ let ContactSchema = new Schema({
     });
 
 // Add index
-ContactSchema.index({}, { unique: true });
+ContactSchema.index({firstName: 1});
 
 module.exports = mongoose.model("Contact", ContactSchema);

@@ -93,6 +93,6 @@ let TicketTimeEntrySchema = new Schema({
     });
 
 // Add index
-TicketTimeEntrySchema.index({}, { unique: true });
+// TicketTimeEntrySchema.index({}, { unique: true });
 
 module.exports = mongoose.model("TicketTimeEntry", TicketTimeEntrySchema);

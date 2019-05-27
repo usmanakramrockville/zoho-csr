@@ -66,6 +66,6 @@ let LayoutSchema = new Schema({
     });
 
 // Add index
-LayoutSchema.index({}, { unique: true });
+LayoutSchema.index({layoutName: 1});
 
 module.exports = mongoose.model("Layout", LayoutSchema);

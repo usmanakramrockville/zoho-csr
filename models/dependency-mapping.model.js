@@ -33,6 +33,6 @@ let DependencyMappingSchema = new Schema({
     });
 
 // Add index
-DependencyMappingSchema.index({}, { unique: true });
+// DependencyMappingSchema.index({}, { unique: true });
 
 module.exports = mongoose.model("DependencyMapping", DependencyMappingSchema);

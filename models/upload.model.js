@@ -30,6 +30,6 @@ let UploadSchema = new Schema({
     });
 
 // Add index
-UploadSchema.index({}, { unique: true });
+// UploadSchema.index({}, { unique: true });
 
 module.exports = mongoose.model("Upload", UploadSchema);

@@ -41,6 +41,6 @@ let TaskCommentSchema = new Schema({
     });
 
 // Add index
-TaskCommentSchema.index({}, { unique: true });
+// TaskCommentSchema.index({}, { unique: true });
 
 module.exports = mongoose.model("TaskComment", TaskCommentSchema);

@@ -202,6 +202,6 @@ let TicketSchema = new Schema({
     });
 
 // Add index
-TicketSchema.index({}, { unique: true });
+TicketSchema.index({subject: 1});
 
 module.exports = mongoose.model("Ticket", TicketSchema);

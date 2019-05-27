@@ -75,6 +75,6 @@ let TimetrackingSchema = new Schema({
     });
 
 // Add index
-TimetrackingSchema.index({}, { unique: true });
+// TimetrackingSchema.index({}, { unique: true });
 
 module.exports = mongoose.model("Timetracking", TimetrackingSchema);

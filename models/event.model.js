@@ -82,6 +82,6 @@ let EventSchema = new Schema({
     });
 
 // Add index
-EventSchema.index({}, { unique: true });
+EventSchema.index({subject: 1});
 
 module.exports = mongoose.model("Event", EventSchema);

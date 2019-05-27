@@ -59,6 +59,6 @@ let DepartmentSchema = new Schema({
     });
 
 // Add index
-DepartmentSchema.index({}, { unique: true });
+DepartmentSchema.index({name: 1});
 
 module.exports = mongoose.model("Department", DepartmentSchema);

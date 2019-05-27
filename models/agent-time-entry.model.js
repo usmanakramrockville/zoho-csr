@@ -94,6 +94,6 @@ let AgentTimeEntrySchema = new Schema({
     });
 
 // Add index
-AgentTimeEntrySchema.index({}, { unique: true });
+// AgentTimeEntrySchema.index({}, { unique: true });
 
 module.exports = mongoose.model("AgentTimeEntry", AgentTimeEntrySchema);

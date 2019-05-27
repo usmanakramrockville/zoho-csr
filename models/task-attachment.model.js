@@ -31,6 +31,6 @@ let TaskAttachmentSchema = new Schema({
     });
 
 // Add index
-TaskAttachmentSchema.index({}, { unique: true });
+// TaskAttachmentSchema.index({}, { unique: true });
 
 module.exports = mongoose.model("TaskAttachment", TaskAttachmentSchema);

@@ -30,6 +30,6 @@ let AccountFollowerSchema = new Schema({
     });
 
 // Add index
-AccountFollowerSchema.index({}, { unique: true });
+// AccountFollowerSchema.index({}, { unique: true });
 
 module.exports = mongoose.model("AccountFollower", AccountFollowerSchema);

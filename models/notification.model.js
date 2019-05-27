@@ -70,6 +70,6 @@ let NotificationSchema = new Schema({
     });
 
 // Add index
-NotificationSchema.index({}, { unique: true });
+// NotificationSchema.index({}, { unique: true });
 
 module.exports = mongoose.model("Notification", NotificationSchema);

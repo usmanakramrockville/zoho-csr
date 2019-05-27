@@ -168,6 +168,6 @@ let ProfileSchema = new Schema({
     });
 
 // Add index
-ProfileSchema.index({}, { unique: true });
+ProfileSchema.index({name: 1});
 
 module.exports = mongoose.model("Profile", ProfileSchema);

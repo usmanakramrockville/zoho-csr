@@ -39,6 +39,6 @@ let ArticleCommentSchema = new Schema({
     });
 
 // Add index
-ArticleCommentSchema.index({}, { unique: true });
+// ArticleCommentSchema.index({}, { unique: true });
 
 module.exports = mongoose.model("ArticleComment", ArticleCommentSchema);

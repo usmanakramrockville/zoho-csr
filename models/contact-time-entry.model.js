@@ -92,6 +92,6 @@ let ContactTimeEntrySchema = new Schema({
     });
 
 // Add index
-ContactTimeEntrySchema.index({}, { unique: true });
+// ContactTimeEntrySchema.index({}, { unique: true });
 
 module.exports = mongoose.model("ContactTimeEntry", ContactTimeEntrySchema);

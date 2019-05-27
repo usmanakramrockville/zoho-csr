@@ -31,6 +31,6 @@ let TicketAttachmentSchema = new Schema({
     });
 
 // Add index
-TicketAttachmentSchema.index({}, { unique: true });
+// TicketAttachmentSchema.index({}, { unique: true });
 
 module.exports = mongoose.model("TicketAttachment", TicketAttachmentSchema);

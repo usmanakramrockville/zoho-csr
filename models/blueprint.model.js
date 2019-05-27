@@ -96,6 +96,6 @@ let BlueprintSchema = new Schema({
     });
 
 // Add index
-BlueprintSchema.index({}, { unique: true });
+// BlueprintSchema.index({}, { unique: true });
 
 module.exports = mongoose.model("Blueprint", BlueprintSchema);
